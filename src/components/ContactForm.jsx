@@ -202,7 +202,7 @@ const ContactForm = () => {
                 <div className="space-y-8">
                   {/* 3D Isometric Elements */}
                   <div className="flex justify-center">
-                    <video src='../../public/VideoMadam.webm' autoPlay loop muted className="w-70 h-70 rounded-xl"></video>
+                    <video src='https://devop360.vercel.app/VideoMadam.webm' autoPlay loop muted className="w-70 h-70 rounded-xl"></video>
                   </div>
 
                   <div className="text-center">
