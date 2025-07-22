@@ -1,13 +1,11 @@
 import React from 'react';
 import { ConfigProvider } from 'antd';
 import Header from './components/Header';
-// import Hero from './components/Hero';
 import EnergySolutions from './components/EnergySolutions';
 import Platform from './components/Platform';
 import About from './components/About';
 import ContactForm from './components/ContactForm';
-// import Footer from './components/Footer';
-import Footer from "./components/Footer/Footer"
+import Footer from "./components/footer/Footer"
 import HeroSection from "./components/hero/HeroSection"
 
 
@@ -45,7 +43,7 @@ function App() {
       <div className="App">
         <Header />
         <main>
-          {/* <Hero /> */}
+            {/* <Hero /> */}
           <HeroSection />
           <EnergySolutions />
           <Platform />
