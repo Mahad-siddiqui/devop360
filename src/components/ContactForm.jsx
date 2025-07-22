@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Form, Input, Select, Button, Checkbox } from 'antd';
+import React, { useState } from "react";
+import { Form, Input, Select, Button, Checkbox } from "antd";
 
 const ContactForm = () => {
   const [form] = Form.useForm();
@@ -9,7 +9,7 @@ const ContactForm = () => {
     setLoading(true);
     // Simulate form submission
     setTimeout(() => {
-      console.log('Form submitted:', values);
+      console.log("Form submitted:", values);
       setLoading(false);
       form.resetFields();
     }, 1000);
@@ -21,15 +21,18 @@ const ContactForm = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-sm font-medium text-gray-400 tracking-wider uppercase mb-4 block">
-            Experience Corva in Action
+            Experience Devop360 in Action
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Schedule Your Demo Today!
+            Schedule Your Personalized Demo Today
           </h2>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Ready to experience the power of Corva firsthand? Schedule a demo today and discover how our innovative solutions 
-            can transform your operations. Do not miss out on the opportunity to optimize your energy industry processes. Take 
-            the first step towards success and schedule your demo now.
+            Discover how Devop360’s integrated platform can streamline your
+            operations, boost performance, and drive innovation. Our team will
+            walk you through a live demo tailored to your business needs. Don’t
+            miss the chance to explore how our solutions can help you scale
+            smarter—schedule your demo now and take the first step toward
+            digital transformation.
           </p>
         </div>
 
@@ -45,65 +48,67 @@ const ContactForm = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Form.Item
                   name="firstName"
-                  label={<span className="text-white font-medium">First name*</span>}
-                  rules={[{ required: true, message: 'Please enter your first name' }]}
+                  label={
+                    <span className="text-white font-medium">First name*</span>
+                  }
+                  rules={[
+                    { required: true, message: "Please enter your first name" },
+                  ]}
                 >
-                  <Input
-                    placeholder="First name"
-                    className="h-12"
-                  />
+                  <Input placeholder="First name" className="h-12" />
                 </Form.Item>
                 <Form.Item
                   name="lastName"
-                  label={<span className="text-white font-medium">Last name*</span>}
-                  rules={[{ required: true, message: 'Please enter your last name' }]}
+                  label={
+                    <span className="text-white font-medium">Last name*</span>
+                  }
+                  rules={[
+                    { required: true, message: "Please enter your last name" },
+                  ]}
                 >
-                  <Input
-                    placeholder="Last name"
-                    className="h-12"
-                  />
+                  <Input placeholder="Last name" className="h-12" />
                 </Form.Item>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Form.Item
                   name="jobTitle"
-                  label={<span className="text-white font-medium">Job Title*</span>}
-                  rules={[{ required: true, message: 'Please enter your job title' }]}
+                  label={
+                    <span className="text-white font-medium">Job Title*</span>
+                  }
+                  rules={[
+                    { required: true, message: "Please enter your job title" },
+                  ]}
                 >
-                  <Input
-                    placeholder="Job Title"
-                    className="h-12"
-                  />
+                  <Input placeholder="Job Title" className="h-12" />
                 </Form.Item>
                 <Form.Item
                   name="email"
                   label={<span className="text-white font-medium">Email*</span>}
                   rules={[
-                    { required: true, message: 'Please enter your email' },
-                    { type: 'email', message: 'Please enter a valid email' }
+                    { required: true, message: "Please enter your email" },
+                    { type: "email", message: "Please enter a valid email" },
                   ]}
                 >
-                  <Input
-                    placeholder="Email"
-                    className="h-12"
-                  />
+                  <Input placeholder="Email" className="h-12" />
                 </Form.Item>
               </div>
 
               <Form.Item
                 name="interestedIn"
-                label={<span className="text-white font-medium">Interested in</span>}
+                label={
+                  <span className="text-white font-medium">Interested in</span>
+                }
               >
                 <Select
                   placeholder="Please Select"
                   className="h-12"
                   options={[
-                    { value: 'geodrilling', label: 'GeoDrilling Solutions' },
-                    { value: 'platform', label: 'Corva Platform' },
-                    { value: 'analytics', label: 'Data Analytics' },
-                    { value: 'fusion', label: 'Fusion Platform' },
-                    { value: 'other', label: 'Other' }
+                    { value: "geodrilling", label: "GeoDrilling Solutions" },
+                    { value: "platform", label: "Corva Platform" },
+                    { value: "analytics", label: "Data Analytics" },
+                    { value: "fusion", label: "Fusion Platform" },
+                    { value: "other", label: "Other" },
                   ]}
                 />
               </Form.Item>
@@ -111,37 +116,48 @@ const ContactForm = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Form.Item
                   name="company"
-                  label={<span className="text-white font-medium">Company name*</span>}
-                  rules={[{ required: true, message: 'Please enter your company name' }]}
+                  label={
+                    <span className="text-white font-medium">
+                      Company name*
+                    </span>
+                  }
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter your company name",
+                    },
+                  ]}
                 >
-                  <Input
-                    placeholder="Company name"
-                    className="h-12"
-                  />
+                  <Input placeholder="Company name" className="h-12" />
                 </Form.Item>
                 <Form.Item
                   name="phone"
-                  label={<span className="text-white font-medium">Phone number</span>}
+                  label={
+                    <span className="text-white font-medium">Phone number</span>
+                  }
                 >
-                  <Input
-                    placeholder="Phone number"
-                    className="h-12"
-                  />
+                  <Input placeholder="Phone number" className="h-12" />
                 </Form.Item>
                 <Form.Item
                   name="country"
-                  label={<span className="text-white font-medium">Country/Region*</span>}
-                  rules={[{ required: true, message: 'Please select your country' }]}
+                  label={
+                    <span className="text-white font-medium">
+                      Country/Region*
+                    </span>
+                  }
+                  rules={[
+                    { required: true, message: "Please select your country" },
+                  ]}
                 >
                   <Select
                     placeholder="Select Country"
                     className="h-12"
                     options={[
-                      { value: 'us', label: 'United States' },
-                      { value: 'ca', label: 'Canada' },
-                      { value: 'uk', label: 'United Kingdom' },
-                      { value: 'au', label: 'Australia' },
-                      { value: 'other', label: 'Other' }
+                      { value: "us", label: "United States" },
+                      { value: "ca", label: "Canada" },
+                      { value: "uk", label: "United Kingdom" },
+                      { value: "au", label: "Australia" },
+                      { value: "other", label: "Other" },
                     ]}
                   />
                 </Form.Item>
@@ -158,30 +174,24 @@ const ContactForm = () => {
                 />
               </Form.Item>
 
-              <div className="space-y-4">
-                <div className="text-xs text-gray-400 leading-relaxed">
-                  Corva AI LLC is committed to protecting and respecting your privacy, and we will only use your personal information to 
-                  administer your account and to provide the products and services you requested from us. From time to time, we would like to 
-                  contact you about our products and services, as well as other content that may be of interest to you. If you consent to us 
-                  contacting you for this purpose, please tick below to say how you would like us to contact you:
-                </div>
+            <div className="space-y-4">
+  <div className="text-xs text-gray-400 leading-relaxed">
+    Devop360 is committed to protecting your privacy. We use your personal information only to manage your account and deliver the services and solutions you’ve requested from us. Occasionally, we may want to contact you about new features, updates, or content that we believe may interest you. If you agree to receive such communications, please indicate your preferences below:
+  </div>
 
-                <Form.Item
-                  name="communications"
-                  valuePropName="checked"
-                >
-                  <Checkbox className="text-white">
-                    <span className="text-white text-sm">I agree to receive other communications from Corva AI LLC.</span>
-                  </Checkbox>
-                </Form.Item>
+  <Form.Item name="communications" valuePropName="checked">
+    <Checkbox className="text-white">
+      <span className="text-white text-sm">
+        I agree to receive updates and communications from Devop360.
+      </span>
+    </Checkbox>
+  </Form.Item>
 
-                <div className="text-xs text-gray-400 leading-relaxed">
-                  You can unsubscribe from these communications at any time. For more information on how to unsubscribe, our privacy 
-                  practices, and how we are committed to protecting and respecting your privacy, please review our Privacy Policy. 
-                  By clicking submit below, you consent to allow Corva AI LLC to store and process the personal information submitted above to 
-                  provide you the content requested.
-                </div>
-              </div>
+  <div className="text-xs text-gray-400 leading-relaxed">
+    You may unsubscribe from these communications at any time. To learn more about how to unsubscribe, as well as our privacy practices and how we protect your data, please review our Privacy Policy. By clicking "Submit", you consent to allow Devop360 to store and process your personal information to provide the requested content.
+  </div>
+</div>
+
 
               <Button
                 type="primary"
@@ -202,27 +212,42 @@ const ContactForm = () => {
                 <div className="space-y-8">
                   {/* 3D Isometric Elements */}
                   <div className="flex justify-center">
-                    <video src='https://devop360.vercel.app/VideoMadam.webm' autoPlay loop muted className="w-70 h-70 rounded-xl"></video>
+                    <video
+                      src="https://devop360.vercel.app/VideoMadam.webm"
+                      autoPlay
+                      loop
+                      muted
+                      className="w-70 h-70 rounded-xl"
+                    ></video>
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold text-white mb-2">Ready to Get Started?</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      Ready to Get Started?
+                    </h3>
                     <p className="text-gray-300">
-                      Experience the future of energy operations with Devop360 innovative platform.
+                      Experience the future of energy operations with Devop360
+                      innovative platform.
                     </p>
                   </div>
 
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div className="glass-card rounded-lg p-4">
-                      <div className="text-2xl font-bold text-primary-400">50+</div>
+                      <div className="text-2xl font-bold text-primary-400">
+                        50+
+                      </div>
                       <div className="text-xs text-gray-400">Experts</div>
                     </div>
                     <div className="glass-card rounded-lg p-4">
-                      <div className="text-2xl font-bold text-primary-400">24/7</div>
+                      <div className="text-2xl font-bold text-primary-400">
+                        24/7
+                      </div>
                       <div className="text-xs text-gray-400">Support</div>
                     </div>
                     <div className="glass-card rounded-lg p-4">
-                      <div className="text-2xl font-bold text-primary-400">100%</div>
+                      <div className="text-2xl font-bold text-primary-400">
+                        100%
+                      </div>
                       <div className="text-xs text-gray-400">Quality</div>
                     </div>
                   </div>

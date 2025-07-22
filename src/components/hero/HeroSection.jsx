@@ -10,13 +10,12 @@ const HeroSection = () => {
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-text">
-            <p className="hero-subtitle">ENERGY PERFORMANCE PLATFORM</p>
+            <p className="hero-subtitle"> Devop360 solutions (Software Development Agency)</p>
             <h1 className="hero-title">
-              Accelerating<br />
-              the Energy Future
+             Innovative Digital <br />  Solutions to Elevate Your Business
             </h1>
             <p className="hero-description">
-              Drive efficiency, productivity, and profitability with our innovative energy solutions.
+              We build powerful, scalable, and user-centric web and mobile applications—tailored to your goals. From startups to enterprises, Devop360 delivers technology that drives growth.
             </p>
             <Button className="btn-outline hero-btn">
               Discover More

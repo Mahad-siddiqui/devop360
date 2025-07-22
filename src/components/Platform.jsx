@@ -1,39 +1,53 @@
-import React, { useState } from 'react';
-import { Button, Tabs } from 'antd';
-import { ArrowRight, Settings, Database, TrendingUp, Activity } from 'lucide-react';
+import React, { useState } from "react";
+import { Button, Tabs } from "antd";
+import {
+  ArrowRight,
+  Settings,
+  Database,
+  TrendingUp,
+  Activity,
+} from "lucide-react";
 
 const Platform = () => {
-  const [activeTab, setActiveTab] = useState('fusion');
+  const [activeTab, setActiveTab] = useState("fusion");
 
   const features = [
     {
       icon: <Database className="w-8 h-8" />,
-      title: 'Infinite Data Quality',
-      description: 'Fusion combines industry experts with advanced technologies and processes to provide seamless data ingestion with unmatched data quality transparency for driving continuous improvement across your operations.',
-      cta: 'Learn More',
-      image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=400'
+      title: "Infinite Data Quality",
+      description:
+        "Fusion combines industry experts with advanced technologies and processes to provide seamless data ingestion with unmatched data quality transparency for driving continuous improvement across your operations.",
+      cta: "Learn More",
+      image:
+        "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=400",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Data Ingestion',
-      description: 'Fusion\'s proprietary data ingestion platform seamlessly aggregates well information management system data, stream data, and vendor data in real-time, and rapidly flags data quality issues related to incoming data.',
-      cta: 'Get Setup',
-      image: 'https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=400'
+      title: "Data Ingestion",
+      description:
+        "Fusion's proprietary data ingestion platform seamlessly aggregates well information management system data, stream data, and vendor data in real-time, and rapidly flags data quality issues related to incoming data.",
+      cta: "Get Setup",
+      image:
+        "https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg?auto=compress&cs=tinysrgb&w=400",
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: 'Data Quality Operations',
-      description: 'Fusion is guided by 50+ energy experts dedicated to monitoring our customer\'s data quality 24/7, 365.',
-      cta: 'Explore Fusion',
-      image: 'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=400'
+      title: "Data Quality Operations",
+      description:
+        "Fusion is guided by 50+ energy experts dedicated to monitoring our customer's data quality 24/7, 365.",
+      cta: "Explore Fusion",
+      image:
+        "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=400",
     },
     {
       icon: <Activity className="w-8 h-8" />,
-      title: 'Health Score',
-      description: 'As part of Fusion, Corva has developed the industry\'s first data quality scoring system to increase visibility of data quality across various ingested sources. Our goal is to reach the highest data quality score in the fastest amount of time.',
-      cta: 'Start Scoring',
-      image: 'https://images.pexels.com/photos/1181376/pexels-photo-1181376.jpeg?auto=compress&cs=tinysrgb&w=400'
-    }
+      title: "Health Score",
+      description:
+        "As part of Fusion, Corva has developed the industry's first data quality scoring system to increase visibility of data quality across various ingested sources. Our goal is to reach the highest data quality score in the fastest amount of time.",
+      cta: "Start Scoring",
+      image:
+        "https://images.pexels.com/photos/1181376/pexels-photo-1181376.jpeg?auto=compress&cs=tinysrgb&w=400",
+    },
   ];
 
   return (
@@ -45,8 +59,10 @@ const Platform = () => {
             Platform
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Transform Your Operations with <br />
-            <span className="gradient-text">Corva's Integrated Platform</span>
+            Power Your Growth with <br />
+            <span className="gradient-text">
+              Devop360’s Integrated Technology Platform
+            </span>
           </h2>
         </div>
 
@@ -55,11 +71,11 @@ const Platform = () => {
           <div className="flex bg-dark-700 rounded-lg p-2">
             <button
               className={`px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center gap-2 ${
-                activeTab === 'fusion' 
-                  ? 'bg-primary-500 text-white' 
-                  : 'text-gray-300 hover:text-white'
+                activeTab === "fusion"
+                  ? "bg-primary-500 text-white"
+                  : "text-gray-300 hover:text-white"
               }`}
-              onClick={() => setActiveTab('fusion')}
+              onClick={() => setActiveTab("fusion")}
             >
               <div className="w-6 h-6 rounded border-2 border-current flex items-center justify-center">
                 <div className="w-2 h-2 bg-current rounded-full"></div>
@@ -68,11 +84,11 @@ const Platform = () => {
             </button>
             <button
               className={`px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center gap-2 ${
-                activeTab === 'dev-center' 
-                  ? 'bg-primary-500 text-white' 
-                  : 'text-gray-300 hover:text-white'
+                activeTab === "dev-center"
+                  ? "bg-primary-500 text-white"
+                  : "text-gray-300 hover:text-white"
               }`}
-              onClick={() => setActiveTab('dev-center')}
+              onClick={() => setActiveTab("dev-center")}
             >
               <Settings className="w-5 h-5" />
               Dev Center
@@ -101,21 +117,23 @@ const Platform = () => {
                     <p className="text-gray-300 leading-relaxed mb-6">
                       {feature.description}
                     </p>
-                    <Button
-                      className="btn-outline inline-flex items-center gap-2 font-medium"
-                    >
+                    <Button className="btn-outline inline-flex items-center gap-2 font-medium">
                       {feature.cta}
                       <ArrowRight size={16} />
                     </Button>
                   </div>
                 </div>
-                
+
                 {index === 0 && (
                   <div className="mt-auto">
                     <div className="glass-card rounded-xl p-6">
                       <div className="flex items-center justify-between mb-4">
-                        <span className="text-gray-400 text-sm font-medium">DATA QUALITY</span>
-                        <span className="text-primary-400 text-2xl font-bold">100%</span>
+                        <span className="text-gray-400 text-sm font-medium">
+                          DATA QUALITY
+                        </span>
+                        <span className="text-primary-400 text-2xl font-bold">
+                          100%
+                        </span>
                       </div>
                       <div className="h-2 bg-dark-600 rounded-full overflow-hidden">
                         <div className="h-full bg-gradient-to-r from-primary-500 to-primary-400 rounded-full w-full"></div>
