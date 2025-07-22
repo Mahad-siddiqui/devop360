@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.particle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-dark-800/80 backdrop-blur-sm border border-white/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-cyan-500 border-none text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/25 hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-white/30 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:border-primary-500 hover:bg-primary-500/10 hover:text-primary-400;
+  }
+
+  .nav-link {
+    @apply relative text-white transition-colors duration-300 hover:text-primary-400;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute w-0 h-0.5 -bottom-1 left-1/2 bg-gradient-to-r from-primary-500 to-cyan-500 transition-all duration-300 -translate-x-1/2;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .feature-card {
+    @apply transition-all duration-300 border border-white/10 hover:-translate-y-1 hover:border-primary-500/50 hover:shadow-xl hover:shadow-black/20;
+  }
+
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+}
+
+/* Ant Design customizations */
+.ant-input, 
+.ant-select-selector, 
+.ant-input-affix-wrapper {
+  background: rgba(64, 64, 64, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.ant-input::placeholder, 
+.ant-select-selection-placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.ant-select-dropdown {
+  background: #2a2a2a !important;
+}
+
+.ant-select-item {
+  color: white !important;
+}
+
+.ant-select-item:hover {
+  background: rgba(20, 184, 166, 0.2) !important;
+}
+
+.ant-form-item-label > label {
+  color: white !important;
+}
+
+.ant-checkbox-wrapper {
+  color: white !important;
+}
+
+.ant-checkbox-wrapper .ant-checkbox-inner {
+  background-color: rgba(64, 64, 64, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner {
+  border-color: #14b8a6 !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #14b8a6 !important;
+  border-color: #14b8a6 !important;
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Carousel specific styles */
+.carousel-slide {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              z-index 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide.active {
+  transform: translateX(0) scale(1);
+  z-index: 20;
+  opacity: 1;
+}
+
+.carousel-slide.next {
+  transform: translateX(100%) scale(0.9);
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.carousel-slide.prev {
+  transform: translateX(-100%) scale(0.9);
+  z-index: 10;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    @apply py-16;
+  }
+  
+  .carousel-slide {
+    width: 280px !important;
+    height: 280px !important;
+  }
+}

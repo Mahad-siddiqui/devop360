@@ -1,0 +1,317 @@
+.platform-section {
+  background: #0a0e1a;
+  position: relative;
+}
+
+.platform-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.platform-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.platform-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.custom-tabs .ant-tabs-nav {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  padding: 8px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-tabs .ant-tabs-tab {
+  margin: 0 !important;
+  padding: 12px 24px !important;
+  border-radius: 50px !important;
+  transition: all 0.3s ease !important;
+  color: #94a3b8 !important;
+}
+
+.custom-tabs .ant-tabs-tab-active {
+  background: linear-gradient(135deg, #0e2e2a, #114d57) !important;
+  color: #ffffff !important;
+}
+
+.custom-tabs .ant-tabs-ink-bar {
+  display: none !important; 
+}
+
+.tab-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.tab-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.fusion-icon {
+  background: linear-gradient(135deg, #222c68, #088197);
+}
+
+.dev-icon {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.platform-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  padding: 10px !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  min-height: 280px;
+}
+
+.platform-card:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(20, 184, 166, 0.3) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.large-card {
+  grid-row: span 2;
+  min-height: 400px;
+}
+
+.card-header {
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.card-action {
+  font-size: 14px;
+  padding: 10px 20px;
+  height: auto;
+}
+
+.card-visual {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  opacity: 0.8;
+}
+
+.feature-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quality-visual {
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quality-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(20, 184, 166, 0.1);
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.quality-icon {
+  color: #14b8a6;
+  font-size: 20px;
+}
+
+.quality-score {
+  font-size: 18px;
+  font-weight: 700;
+  color: #14b8a6;
+}
+
+.quality-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metric-bar {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.ingestion-visual {
+  position: relative;
+  width: 120px;
+  height: 80px;
+}
+
+.data-streams {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stream {
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, #14b8a6, #06b6d4);
+  margin: 8px 0;
+  border-radius: 2px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.stream-1 { animation-delay: 0s; }
+.stream-2 { animation-delay: 0.5s; }
+.stream-3 { animation-delay: 1s; }
+
+.ingestion-hub {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.operations-visual {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.operations-icon {
+  font-size: 32px;
+  color: #14b8a6;
+}
+
+.monitoring-badge {
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.health-visual {
+  position: relative;
+  width: 100px;
+  height: 60px;
+}
+
+.chart-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+  clip-path: polygon(0 100%, 20% 80%, 40% 60%, 60% 40%, 80% 20%, 100% 0%, 100% 100%);
+  border-radius: 0 0 8px 8px;
+}
+
+.chart-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.3), rgba(6, 182, 212, 0.3));
+  clip-path: polygon(0 100%, 20% 80%, 40% 60%, 60% 40%, 80% 20%, 100% 0%, 100% 100%);
+  filter: blur(10px);
+}
+
+@media (max-width: 968px) {
+  .platform-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .large-card {
+    grid-row: span 1;
+    min-height: 280px;
+  }
+  
+  .platform-card {
+    padding: 24px !important;
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .platform-header .section-title {
+    font-size: 36px;
+  }
+  
+  .custom-tabs .ant-tabs-tab {
+    padding: 8px 16px !important;
+  }
+  
+  .tab-label {
+    font-size: 14px;
+  }
+  
+  .tab-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-card {
+    padding: 20px !important;
+    min-height: 200px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+  }
+}
